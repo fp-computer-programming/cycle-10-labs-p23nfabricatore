@@ -1,0 +1,25 @@
+try_count = 0
+choice = ""
+valid = False
+
+while True:
+    print("Please enter a number between 1 and 3")
+    while True:
+        try_count += 1
+
+        choice = input("")
+
+        try: #make sure the user has entered a number
+            choice = int(choice)
+            if choice >= 1 or choice <= 3: #if the value is outside our range
+                valid = True
+                break #then we're done!
+        except:
+            continue #if the user didn't enter a number, go around again
+
+        if try_count >= 10: #if we've done this ten times exit
+            try_count = 0
+            break #exit to the outer loop
+
+        if valid: #if we've got a proper value, we're done
+            break #exit the loop

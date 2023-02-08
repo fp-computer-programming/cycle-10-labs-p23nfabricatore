@@ -1,0 +1,5 @@
+def double(lst):
+    for i, x in enumerate(lst):
+        x *= 2
+        print("x = %s" % x)
+        print("lst[%d] = %s" % (i, lst[i]))
